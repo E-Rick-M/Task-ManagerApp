@@ -1,17 +1,18 @@
 import "./App.css";
 import SideBar from "./Components/Header/sidebar";
+import { TaskProvider } from "./Components/Store/store";
+import TaskDetails from "./Components/TaskDetails";
+import TaskForm from "./Components/TaskForm";
 
 function App() {
   return (
-    <>
-    <div className="w-screen h-screen bg-white flex">
-    <SideBar />
-    <div className="flex-1 flex justify-center items-center h-screen">
-      <h1 className="text-4xl font-bold text-red-500">Hello World</h1>
+    <TaskProvider>
+    <div className="flex gap-8 h-screen">
+       <SideBar/>
+       <TaskDetails/>
     </div>
-    </div>
-        
-    </>
+    <TaskForm/>
+    </TaskProvider>
   );
 }
 
