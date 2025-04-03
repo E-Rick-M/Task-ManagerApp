@@ -19,7 +19,7 @@ export const TaskContext=createContext({
 
 export const TaskProvider=({children})=>{
     const [tasks,setTasks]=useState(NewTaskDummy)
-    const [selectedtask,setSelectedTask]=useState(null)
+    const [selectedtask,setSelectedTask]=useState(undefined)
 
     const addTask=(task)=>{
         const newTask={

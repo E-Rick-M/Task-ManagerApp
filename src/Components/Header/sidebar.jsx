@@ -53,11 +53,15 @@ export default function Sidebar(){
     setSelectedTask(task)
   }
   const{setSelectedTask,tasks}=useContext(TaskContext)
+
+  const handleAddTask=()=>{
+    // setSelectedTask(null)
+  }
   return(
     <div className='w-1/4  md:w-72 px-8 py-16 bg-gray-800 text-white h-screen p-4'>
       <div className='flex justify-between items-center'>
         <h2 className='text-lg font-semibold text-center'>Tasks-App</h2>
-        <button>Add Task</button>
+        <button onClick={handleAddTask}>Add Task</button>
       </div>
       
       <ul>
